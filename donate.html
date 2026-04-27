@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | Christian Legacy Makers (CLM)</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo2.jpg" alt="Christian Legacy Makers Logo" class="logo-img">
+      </a>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="impact.html">Our Impact</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="donate.html" class="btn-donate">Donate</a>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-header">
+    <div class="container">
+      <h1>Support Our Mission</h1>
+      <p>Your generosity enables us to reach more students, train more leaders, and transform more communities across Uganda.</p>
+    </div>
+  </section>
+
+  <section class="donation-section">
+    <div class="container">
+      <div class="donation-grid">
+        <div class="donation-form-container">
+          <h2>Make a Donation</h2>
+          <form id="donationForm" class="clm-form">
+            <div class="form-group">
+              <label>Donation Amount (UGX)</label>
+              <div class="amount-buttons">
+                <button type="button" data-amount="50000">UGX 50,000</button>
+                <button type="button" data-amount="100000">UGX 100,000</button>
+                <button type="button" data-amount="250000">UGX 250,000</button>
+                <button type="button" data-amount="500000">UGX 500,000</button>
+                <button type="button" data-amount="1000000">UGX 1,000,000</button>
+              </div>
+              <div class="custom-amount">
+                <label for="customAmount">Other Amount (UGX)</label>
+                <input type="number" id="customAmount" name="customAmount" placeholder="Enter amount">
+              </div>
+              <input type="hidden" id="donationAmount" name="donationAmount">
+            </div>
+
+            <div class="form-group">
+              <label>Donor Information</label>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="donorName" name="donorName" placeholder="Full Name *" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="donorEmail" name="donorEmail" placeholder="Email Address *" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="tel" id="donorPhone" name="donorPhone" placeholder="Phone Number">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Payment Method</label>
+              <div class="payment-methods">
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="mobile_money" checked>
+                  <span><i class="fas fa-mobile-alt"></i> Mobile Money</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="paymentMethod" value="bank_transfer">
+                  <span><i class="fas fa-university"></i> Bank Transfer</span>
+                </label>
+              </div>
+            </div>
+
+            <div id="mobileMoneyFields" class="payment-fields">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="mobileNetwork">Mobile Network</label>
+                  <select id="mobileNetwork" name="mobileNetwork">
+                    <option value="mtn">MTN Mobile Money</option>
+                    <option value="airtel">Airtel Money</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="mobileNumber">Mobile Money Number</label>
+                  <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="e.g., 0777123456">
+                </div>
+              </div>
+            </div>
+
+            <div id="bankTransferFields" class="payment-fields" style="display: none;">
+              <div class="bank-details">
+                <h4>Bank Transfer Details</h4>
+                <p><strong>Bank Name:</strong> Stanbic Bank Uganda</p>
+                <p><strong>Account Name:</strong> Christian Legacy Makers</p>
+                <p><strong>Account Number:</strong> 9030006123456</p>
+                <p><strong>Branch:</strong> Kampala Road</p>
+                <p><strong>SWIFT Code:</strong> SBICUGKA</p>
+                <div class="form-group">
+                  <label for="transactionRef">Transaction Reference (Optional)</label>
+                  <input type="text" id="transactionRef" name="transactionRef" placeholder="Enter reference number if available">
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary btn-large">Donate Now</button>
+            <div id="donationFormMessage" class="form-message"></div>
+          </form>
+        </div>
+        <div class="donation-info">
+          <h3>Why Give to CLM?</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> 94% of donations go directly to programs</li>
+            <li><i class="fas fa-check-circle"></i> Tax-deductible receipts provided</li>
+            <li><i class="fas fa-check-circle"></i> Transparent financial reporting</li>
+            <li><i class="fas fa-check-circle"></i> Make a lasting impact on students' lives</li>
+          </ul>
+          <div class="other-ways">
+            <h4>Other Ways to Give</h4>
+            <p><i class="fas fa-mobile-alt"></i> Dial *165# to donate via MTN MoMo</p>
+            <p><i class="fas fa-mobile-alt"></i> Dial *185# to donate via Airtel Money</p>
+            <p><i class="fas fa-envelope"></i> Send a cheque payable to "Christian Legacy Makers"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <!-- Same footer as index.html -->
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <img src="images/logo2.jpg" alt="CLM Logo" class="footer-logo">
+        <p>Christian Legacy Makers is committed to equipping the next generation for Godly influence through Evangelism, Discipleship, and Compassionate Empathy.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="impact.html">Our Impact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="get-involved.html">Volunteer</a></li>
+          <li><a href="get-involved.html">Prayer Partners</a></li>
+          <li><a href="get-involved.html">Corporate Partnerships</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Plot 227/9, Kafeero Road, Mulago, Kampala, Uganda</li>
+          <li><i class="fas fa-phone"></i> +256-788-582-852</li>
+          <li><i class="fas fa-envelope"></i> info@christianlegacymakers.org</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Christian Legacy Makers (CLM). All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script>
+  // Donation page specific functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const amountButtons = document.querySelectorAll('.amount-buttons button');
+    const customAmountInput = document.getElementById('customAmount');
+    const donationAmountHidden = document.getElementById('donationAmount');
+    const paymentRadios = document.querySelectorAll('input[name="paymentMethod"]');
+    const mobileMoneyFields = document.getElementById('mobileMoneyFields');
+    const bankTransferFields = document.getElementById('bankTransferFields');
+
+    // Amount selection
+    amountButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const amount = this.getAttribute('data-amount');
+        donationAmountHidden.value = amount;
+        // Highlight selected button
+        amountButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        customAmountInput.value = '';
+      });
+    });
+
+    customAmountInput.addEventListener('input', function() {
+      donationAmountHidden.value = this.value;
+      amountButtons.forEach(b => b.classList.remove('active'));
+    });
+
+    // Payment method toggle
+    paymentRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (this.value === 'mobile_money') {
+          mobileMoneyFields.style.display = 'block';
+          bankTransferFields.style.display = 'none';
+        } else {
+          mobileMoneyFields.style.display = 'none';
+          bankTransferFields.style.display = 'block';
+        }
+      });
+    });
+
+    // Form submission
+    const donationForm = document.getElementById('donationForm');
+    donationForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const amount = donationAmountHidden.value;
+      if (!amount || amount <= 0) {
+        alert('Please select or enter a donation amount.');
+        return;
+      }
+      const donorName = document.getElementById('donorName').value;
+      const donorEmail = document.getElementById('donorEmail').value;
+      if (!donorName || !donorEmail) {
+        alert('Please provide your name and email address.');
+        return;
+      }
+      const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+      if (paymentMethod === 'mobile_money') {
+        const mobileNetwork = document.getElementById('mobileNetwork').value;
+        const mobileNumber = document.getElementById('mobileNumber').value;
+        if (!mobileNumber) {
+          alert('Please provide your mobile money number.');
+          return;
+        }
+        alert(`Thank you for your donation of UGX ${amount} via ${mobileNetwork === 'mtn' ? 'MTN Mobile Money' : 'Airtel Money'} to number ${mobileNumber}. You will receive a payment prompt on your phone.`);
+      } else {
+        alert(`Thank you for choosing to donate via Bank Transfer. Please transfer UGX ${amount} to the account details provided. Your support makes a difference!`);
+      }
+      donationForm.reset();
+      donationAmountHidden.value = '';
+      amountButtons.forEach(b => b.classList.remove('active'));
+      document.getElementById('donationFormMessage').innerHTML = '<p class="success-message">Thank you for your generosity! God bless you.</p>';
+      setTimeout(() => {
+        document.getElementById('donationFormMessage').innerHTML = '';
+      }, 5000);
+    });
+  });
+</script>
+</body>
+</html>

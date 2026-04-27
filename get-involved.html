@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved | Christian Legacy Makers</title>
+  <meta name="description" content="Volunteer, donate, pray, or partner with CLM – help us reach university students in Uganda with the gospel.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo2.jpg" alt="CLM Logo" class="logo-img">
+      </a>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="get-involved.html" class="active">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="donate.html" class="btn-donate">Donate</a>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-header">
+    <div class="container">
+      <h1>Get Involved</h1>
+      <p>Join us in making an eternal impact on the next generation</p>
+    </div>
+  </section>
+
+  <section class="involve-options section-padding">
+    <div class="container">
+      <div class="involve-grid">
+        <div class="involve-card">
+          <i class="fas fa-hand-holding-usd"></i>
+          <h3>Give Financially</h3>
+          <p>Your generous donations enable us to reach more students, train more leaders, and transform more communities. Every gift, no matter the size, makes a difference.</p>
+          <a href="donate.html" class="btn-small">Donate Now</a>
+        </div>
+        <div class="involve-card">
+          <i class="fas fa-users"></i>
+          <h3>Volunteer</h3>
+          <p>Join our team of dedicated volunteers who serve as mentors, event coordinators, and prayer partners. Your time and talents are invaluable.</p>
+          <a href="#" class="btn-small volunteer-btn" id="scrollToVolunteerForm">Volunteer Today</a>
+        </div>
+        <div class="involve-card">
+          <i class="fas fa-pray"></i>
+          <h3>Prayer Partners</h3>
+          <p>Commit to praying regularly for our ministry, students, and leadership. Sign up to receive our monthly prayer newsletter.</p>
+          <a href="#" class="btn-small prayer-btn" id="prayerSignupBtn">Join Prayer Team</a>
+        </div>
+        <div class="involve-card">
+          <i class="fas fa-building"></i>
+          <h3>Corporate Partnerships</h3>
+          <p>Partner with us as a corporate sponsor to help fund specific programs or campus outreaches. Contact us to explore partnership opportunities.</p>
+          <a href="contact.html" class="btn-small">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="volunteer-form-section section-padding bg-light" id="volunteerFormSection">
+    <div class="container">
+      <div class="form-container">
+        <h2>Volunteer Application</h2>
+        <p>Fill out the form below to express your interest in volunteering with CLM.</p>
+        <form id="volunteerForm" class="clm-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="volName">Full Name *</label>
+              <input type="text" id="volName" name="volName" required>
+            </div>
+            <div class="form-group">
+              <label for="volEmail">Email Address *</label>
+              <input type="email" id="volEmail" name="volEmail" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="volPhone">Phone Number</label>
+              <input type="tel" id="volPhone" name="volPhone">
+            </div>
+            <div class="form-group">
+              <label for="volLocation">Location (City/Region)</label>
+              <input type="text" id="volLocation" name="volLocation">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="volSkills">Skills/Experience</label>
+            <textarea id="volSkills" name="volSkills" rows="3" placeholder="Tell us about your skills, experience, and how you'd like to help..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="volAvailability">Availability</label>
+            <select id="volAvailability" name="volAvailability">
+              <option value="">Select...</option>
+              <option value="weekdays">Weekdays</option>
+              <option value="weekends">Weekends</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary">Submit Application</button>
+          <div id="volunteerFormMessage" class="form-message"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prayer signup modal (simple) -->
+  <div id="prayerModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h3>Join Our Prayer Team</h3>
+      <p>Sign up to receive monthly prayer requests and updates.</p>
+      <form id="prayerForm">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn-primary" style="margin-top:1rem;">Subscribe</button>
+      </form>
+      <div id="prayerMessage"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <!-- same footer -->
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <img src="images/logo2.jpg" alt="CLM Logo" class="footer-logo">
+        <p>Equipping the next generation for Godly influence through Evangelism, Discipleship, and Compassionate Empathy.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="get-involved.html">Volunteer</a></li>
+          <li><a href="get-involved.html">Prayer Partners</a></li>
+          <li><a href="get-involved.html">Corporate Partnerships</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Plot 227/9, Kafeero Road, Mulago, Kampala, Uganda</li>
+          <li><i class="fas fa-phone"></i> +256-788-582-852</li>
+          <li><i class="fas fa-envelope"></i> info@christianlegacymakers.org</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Christian Legacy Makers (CLM). All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/forms.js"></script>
+<script>
+  // Scroll to volunteer form
+  document.getElementById('scrollToVolunteerForm')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('volunteerFormSection').scrollIntoView({ behavior: 'smooth' });
+  });
+  // Prayer modal
+  const modal = document.getElementById('prayerModal');
+  const btn = document.getElementById('prayerSignupBtn');
+  const span = document.getElementsByClassName('modal-close')[0];
+  if(btn) btn.onclick = function(e) { e.preventDefault(); modal.style.display = 'flex'; }
+  if(span) span.onclick = function() { modal.style.display = 'none'; }
+  window.onclick = function(event) { if (event.target == modal) modal.style.display = 'none'; }
+  document.getElementById('prayerForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input').value;
+    document.getElementById('prayerMessage').innerHTML = '<p class="success-message">Thank you! You\'ve been added to our prayer team.</p>';
+    this.reset();
+    setTimeout(() => { modal.style.display = 'none'; document.getElementById('prayerMessage').innerHTML = ''; }, 2000);
+  });
+</script>
+</body>
+</html>
